@@ -8,7 +8,7 @@ from PyQt6.QtGui import QPainter, QColor
 class CircleDrawer(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('Git и окружности.ui', self)
+        uic.loadUi('UI.ui', self)
         self.should_draw = False
         self.pushButton.clicked.connect(self.repaintLabel)
 
