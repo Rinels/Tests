@@ -18,15 +18,15 @@ class CircleDrawer(QMainWindow):
 
     def paintEvent(self, event):
         if self.should_draw:
-            self.painter = QPainter(self)
-            self.painter.setPen(QColor('#ffff00'))
-            self.painter.setBrush(QColor('#ffff00'))
+            painter = QPainter(self)
+            painter.setPen(QColor('#ffff00'))
+            painter.setBrush(QColor('#ffff00'))
 
             for _ in range(random.randint(2, 10)):
                 radius = random.randint(10, 100)
                 x = random.randint(0, self.label.width() - radius)
                 y = random.randint(0, self.label.height() - radius)
-                self.painter.drawEllipse(x, y, radius, radius)
+                painter.drawEllipse(x, y, radius, radius)
 
 
 if __name__ == '__main__':
