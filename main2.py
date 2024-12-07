@@ -21,7 +21,6 @@ class CircleDrawer(QMainWindow):
             painter = QPainter(self)
             painter.setPen(QColor('#ffff00'))
             painter.setBrush(QColor('#ffff00'))
-
             for _ in range(random.randint(2, 10)):
                 radius = random.randint(10, 100)
                 x = random.randint(0, self.label.width() - radius)
